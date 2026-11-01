@@ -1,0 +1,114 @@
+.app {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 2rem;
+    background-color: #d7d9dc;
+}
+
+.card {
+    border: 1px solid #ccc;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    /*border-radius: 8px;*/
+    padding:10px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 250px;
+    width: 250px;
+    transition: transform 0.2s;
+} 
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-container {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.pokemon-properties {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.5em;
+  row-gap: 2;
+  align-items: baseline;
+}
+
+/* optional: right-align the values instead */
+.pokemon-properties--values-end {
+  grid-template-columns: auto max-content;
+}
+.pokemon-properties--values-end > span:nth-child(even) {
+  justify-self: end;
+}
+
+.fav-btn {
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0;
+}
+
+.fav-btn--on {
+  color: #e11d48;
+}
+
+/* FilterBar.css */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.filter-btn {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #fff;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.filter-btn:hover {
+  border-color: #94a3b8;
+}
+
+.filter-btn--active {
+  background: #1e293b;
+  border-color: #1e293b;
+  color: #fff;
+}
+
+.filter-btn--fav.filter-btn--active {
+  background: #e11d48;
+  border-color: #e11d48;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  max-width: 300px;
+}
+
+.toolbar__search {
+  flex: 1 1 220px;
+  min-width: 0;
+  border-radius: 8px;
+}
+
+.result-count {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
